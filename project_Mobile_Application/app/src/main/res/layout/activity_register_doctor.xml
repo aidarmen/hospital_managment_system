@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".register.RegisterDoctorActivity">
+
+    <Button
+            android:id="@+id/selectphoto_button_register"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/rounded_select_photo_button"
+            android:text="Select Photo"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/selectphoto_imageview_register"
+            app:civ_border_width="4dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/selectphoto_button_register"
+            app:layout_constraintEnd_toEndOf="@+id/selectphoto_button_register"
+            app:layout_constraintStart_toStartOf="@+id/selectphoto_button_register"
+            app:layout_constraintTop_toTopOf="@+id/selectphoto_button_register"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+
+            android:id="@+id/scrollView2"
+            app:layout_constrainedHeight="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="180dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="50dp">
+            <EditText
+                    android:id="@+id/register_doctor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="@string/prompt_name"
+                    android:hint="@string/prompt_name"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/layout_bg3"
+
+
+
+                    app:layout_constraintHorizontal_bias="0.0"/>
+            <EditText
+                    android:id="@+id/register_doctor_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="weight"
+                    android:hint="Profession"
+                    android:inputType="text"
+                    android:selectAllOnFocus="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/layout_bg3"
+
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/register_patient_weight"
+                    android:layout_marginTop="28dp"/>
+            <EditText
+                    android:id="@+id/register_doctor_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="phone"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:selectAllOnFocus="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/layout_bg3"
+
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/register_patient_email"
+                    android:layout_marginTop="28dp"/>
+
+            <EditText
+                    android:id="@+id/register_doctor_hospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="weight"
+                    android:hint="Hospital name"
+                    android:inputType="text"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/layout_bg3"
+                    android:selectAllOnFocus="false"
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/register_patient_password"
+                    android:layout_marginTop="28dp"/>
+            <EditText
+                    android:id="@+id/register_doctor_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="@string/prompt_email"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/layout_bg3"
+
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/register_patient_name"/>
+
+
+            <EditText
+                    android:id="@+id/register_doctor_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="@string/prompt_password"
+                    android:hint="@string/prompt_password"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_patient_date_birth"
+                    android:selectAllOnFocus="false"
+                    android:background="@drawable/layout_bg3"
+                    app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="28dp"/>
+
+            <EditText
+                    android:id="@+id/register_doctor_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:autofillHints="about yourself"
+                    android:hint="About yourself"
+                    android:inputType="textMultiLine"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/layout_bg3"
+                    android:selectAllOnFocus="false"
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/register_patient_phone"
+                    android:layout_marginTop="28dp" android:singleLine="false"
+                    android:textIsSelectable="false" android:gravity="top"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+            android:id="@+id/sign_up_button"
+            android:text="@string/action_sign_up"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/layout_bg4"
+            android:textColor="@color/colorTextOnPrimaryBackground"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="20dp"/>
+    <ProgressBar
+            android:id="@+id/progressBar2"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"/>
+
+
+    <TextView
+            android:text="Sign Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="152dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/textView16"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"/>
+
+
+    <TextView
+            android:text="You have an account?"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_button"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="60dp"/>
+    <Button
+            android:text="SIGN-IN"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/sign_in_button"
+            android:backgroundTint="#FFFFFF"
+
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_button"
+            android:layout_marginTop="32dp" android:background="?android:attr/selectableItemBackground"/>
+    <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/btn_reset_password2"
+            android:backgroundTint="@color/colorTextOnPrimaryBackground"
+
+            android:textSize="15sp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            android:layout_marginStart="88dp"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_button"
+            android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

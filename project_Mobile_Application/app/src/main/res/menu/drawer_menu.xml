@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@drawable/top1"
+
+
+    >
+        <item
+                android:id="@+id/action_search_for_doctors"
+                android:title="@string/search"
+                android:icon="@drawable/icon_doctor"
+
+
+        />
+        <item
+                android:id="@+id/action_my_profile"
+                android:title="@string/my_profile"
+                android:icon="@drawable/icon_profile"
+
+        />
+        <item
+                android:id="@+id/action_documentation"
+                android:title="@string/documentation"
+                android:icon="@drawable/icon_document"
+
+        />
+
+        <item
+                android:id="@+id/sign_out"
+                android:title="@string/logout"
+                android:icon="@drawable/icon_logout"
+
+        />
+
+
+</menu>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".MessageFragment" android:backgroundTint="#FFFFFF">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#71B9A2"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/linearLayout">
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:textColor="#FAFAFA"/>
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:text="Robert Henry"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="#FAFAFA"
+                android:id="@+id/message_name"/>
+<!--        <ImageView-->
+<!--                android:src="@drawable/profile_image"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:gravity="right"-->
+<!--                android:id="@+id/imageView6"-->
+<!--                android:layout_weight="1"/>-->
+
+<!--        <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                app:civ_border_color="#3f51b5"-->
+<!--                app:civ_border_width="2dp"-->
+<!--                app:civ_shadow="false"-->
+<!--                app:civ_shadow_radius="5dp"-->
+<!--                app:civ_shadow_color="#3f51b5"-->
+<!--                android:src="@drawable/profile_image"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:gravity="right"-->
+<!--                android:id="@+id/profile_image_chat"-->
+<!--                android:layout_weight="1"/>-->
+
+
+
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_chat_log"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_chat_log"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+<!--        <LinearLayout-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:background="@drawable/layout_bg"-->
+<!--        >-->
+
+
+<!--            <ImageButton-->
+<!--                    app:srcCompat="@drawable/plus"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/imageButton1"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:backgroundTint="#FFFFFF"-->
+<!--                    android:scaleX="1.4"-->
+<!--                    android:scaleY="1.4"-->
+
+<!--            />-->
+<!--            <ImageButton-->
+<!--                    app:srcCompat="@drawable/photo"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/imageButton2"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:backgroundTint="#FFFFFF"-->
+<!--                    android:scaleX="1.4"-->
+<!--                    android:scaleY="1.4"-->
+<!--            />-->
+<!--            <ImageButton-->
+<!--                    app:srcCompat="@drawable/doc"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/imageButton3"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:backgroundTint="#FFFFFF"-->
+<!--                    android:scaleX="1.4"-->
+<!--                    android:scaleY="1.4"-->
+<!--            />-->
+<!--            <ImageButton-->
+<!--                    app:srcCompat="@drawable/record"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/imageButton4"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:scaleX="1.4"-->
+<!--                    android:scaleY="1.4"-->
+<!--                    android:backgroundTint="#FFFFFF"/>-->
+<!--            <EditText-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:padding="7dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:hint="message..."-->
+<!--                    android:textColor="@color/colorTextOnWhiteBackground"-->
+<!--                    android:background="@drawable/layout_bg2"-->
+<!--                    android:ems="10"-->
+<!--                    android:id="@+id/editTextTextPersonName"-->
+<!--                    android:layout_weight="1"-->
+<!--            />-->
+
+<!--        </LinearLayout>-->
+
+    <EditText
+            android:id="@+id/edittext_chat_log"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Enter Message"
+            android:background="@android:color/white"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+            android:id="@+id/send_button_chat_log"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+<!--    </LinearLayout>-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
